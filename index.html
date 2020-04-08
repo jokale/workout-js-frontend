@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title></title>
+</head>
+<body>
+    <div class="container ">
+        <h1>Workout App</h1>
+        <form id="new-workout-form">
+            <input type="text" name="workout-name" id="new-workout-name">
+            <input type="text" name="workout-body_part" id="new-workout-body_part">
+            <input type="text" name="workout-description" id="new-workout-description">
+            <input type="text" name="workout-creator" id="new-workout-creator">
+
+            <input type="submit">
+        </form>
+        <div id="workouts-content">
+        <div id="workouts-container">
+
+
+        </div>
+        <div id="workout-show">
+
+        </div>
+        </div>
+    </div>
+    <script src="src/components/workouts.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/adapters/WorkoutsAdapter.js"></script>
+    <script src="src/index.js"></script>
+
+</body>
+</html>
