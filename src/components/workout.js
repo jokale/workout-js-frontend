@@ -6,5 +6,8 @@ class Workout {
         this.description = workoutJSON.description
         this.creator = workoutJSON.creator
      }
+// renderLi(){
+// return `<li>${this.name}</li>`
+// }
 }
 
