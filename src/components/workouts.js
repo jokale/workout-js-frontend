@@ -8,13 +8,34 @@ class Workouts{
 
     initiBindingsAndEventListeners(){
         this.workoutsContainer = document.getElementById('workouts-container')
+        this.newWorkoutDescription =document.getElementById('new-workout-description')
+        this.workoutForm = document.getElementById('new-workout-form')
+        this.workoutForm.addEventListener('submit', this.createWorkout.bind(this))
+        this.workoutsContainer.addEventListener('dblclick', function(){
+            console.log('double clicked')
+        })
+
+    }
+    createWorkout(e){
+        e.preventDefault()
+            const value = this.newWorkoutDescription.value
+
+        this.adapter.createWorkout(value).then(workout => {
+            // this.workouts.push(workout))
+            console.log(this.workouts)
+      })            
+      this.render()
+
+
     }
     fetchAndLoadWorkouts() {
+    
           this.adapter
           .getWorkouts()
           .then(workouts => {
             workouts.forEach(workout => this.workouts.push(workout))
-          console.log(this.workouts)
+
+        //   console.log(this.workouts)
         })
         .then(() => {
             this.render()
@@ -22,7 +43,7 @@ class Workouts{
     }
     render(){
         // const workoutsContainer = document.getElementById('workouts-container')
-        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li>${workout.name}</li>`).join('')
+        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li>${workout.description}</li>`).join('')
     }
  }
 

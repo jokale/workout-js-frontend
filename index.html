@@ -10,27 +10,37 @@
     <div class="container ">
         <h1>Workout App</h1>
         <form id="new-workout-form">
-            <input type="text" name="workout-name" id="new-workout-name">
-            <input type="text" name="workout-body_part" id="new-workout-body_part">
-            <input type="text" name="workout-description" id="new-workout-description">
-            <input type="text" name="workout-creator" id="new-workout-creator">
+            <input type="text" name="workout-name" id="new-workout-name" placeholder="Workout name"> 
+            <input type="text" name="workout-description" id="new-workout-description" placeholder="Workout description">
+             <input type="text" name="workout-body_part" id="new-workout-body_part-name" placeholder="Body part">
+            <input type="text" name="workout-athlete" id="new-workout-athlete-name" placeholder="Athlete name">
 
-            <input type="submit" name="Submit_new_workout">
+            <input type="submit" name="submit">
         </form>
-        <div id="workouts-content">
-        <div id="workouts-container">
+        <div id="workouts-content"><br>
+           <h4>Some of the workouts already made:</h4>   
+        <div contenteditable="true" id="workouts-container">
 
 
         </div>
+      
         <div id="workout-show">
 
         </div>
         </div>
     </div>
+  
+    <p id="workout-name" onclick="myFunction()"> Jenna , Louise, Tom 
+    </p>
     <script src="src/components/workouts.js"></script>
     <script src="src/components/app.js"></script>
     <script src="src/adapters/WorkoutsAdapter.js"></script>
     <script src="src/index.js"></script>
+<script> 
+function myFunction(){
+    document.getElementById("workout-name").innerHTML = "Some of the creators of these workouts";
+}
+</script>
 
 </body>
 </html>

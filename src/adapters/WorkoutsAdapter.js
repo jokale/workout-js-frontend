@@ -6,4 +6,17 @@ class WorkoutsAdapter {
         return fetch(this.baseUrl).then(res => res.json()
         )
     }
+    createWorkout(value) {
+        const workout = {
+            description: value,
+        }
+        return fetch(this.baseUrl, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+              },
+            description: JSON.stringify({workout}),
+        }).then(res => res.json)
+
+    }
 }
