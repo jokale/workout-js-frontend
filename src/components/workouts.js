@@ -11,12 +11,11 @@ class Workouts{
         this.newWorkoutDescription =document.getElementById('new-workout-description')
         this.workoutForm = document.getElementById('new-workout-form')
         this.workoutForm.addEventListener('submit', this.createWorkout.bind(this))
-        this.workoutsContainer.addEventListener('dblclick', function(){
-            console.log('double clicked')
-        })
+        // this.workoutsContainer.addEventListener('dblclick', this.handleWorkoutClick.bind(this))
+        // }
 
     }
-    createWorkout(e){
+    createWorkout(e) {
         e.preventDefault()
             const value = this.newWorkoutDescription.value
 
@@ -28,6 +27,11 @@ class Workouts{
 
 
     }
+
+    // handleWorkoutClick(e){
+    //     const li = e.target 
+    //     li.contentEditable = true 
+    // }
     fetchAndLoadWorkouts() {
     
           this.adapter
