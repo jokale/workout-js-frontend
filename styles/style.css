@@ -2,21 +2,31 @@ body {
     background-color: powderblue;
   }
   h1 {
+    font-family:  'Permanent Marker', cursive;
     color: cornflowerblue;
     text-align: center;
+  }
+
+  h3{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: cornflowerblue;
   }
   h4 {
     color: cornflowerblue;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
   }
   p {
     color: darkblue;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
   }
 
   li{
     color: blueviolet;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
   }
   
   input{
@@ -27,4 +37,9 @@ body {
 
   input#new-workout-description{
     text-align: center;
+  }
+
+  input#new-workout-name{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
   }
