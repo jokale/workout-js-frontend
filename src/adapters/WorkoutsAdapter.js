@@ -7,15 +7,16 @@ class WorkoutsAdapter {
         )
     }
     createWorkout(value) {
+
         const workout = {
             description: value,
         }
-        return fetch(this.baseUrl, {
+ return fetch(this.baseUrl, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
               },
-            description: JSON.stringify({workout}),
+            body: JSON.stringify({workout}),
         }).then(res => res.json)
 
     }

@@ -7,8 +7,11 @@ class Workouts{
     }
 
     initiBindingsAndEventListeners(){
-        this.workoutsContainer = document.getElementById('workouts-container')
-        this.newWorkoutDescription =document.getElementById('new-workout-description')
+        this.workoutsContainer = document.getElementById('workouts-container')     
+       this.newWorkoutName = document.getElementById('new-workout-name')
+        this.newWorkoutDescription = document.getElementById('new-workout-description')
+        this.newWorkoutBodyPart = document.getElementById('new-workout-body_part_name')
+        this.newWorkoutAthlete = document.getElementById('new-workout-athlete-name')
         this.workoutForm = document.getElementById('new-workout-form')
         this.workoutForm.addEventListener('submit', this.createWorkout.bind(this))
         // this.workoutsContainer.addEventListener('dblclick', this.handleWorkoutClick.bind(this))
@@ -16,14 +19,16 @@ class Workouts{
 
     }
     createWorkout(e) {
+        // this.adapter = new WorkoutsAdapter
         e.preventDefault()
-            const value = this.newWorkoutDescription.value
+            const value =  this.newWorkoutDescription.value
 
         this.adapter.createWorkout(value).then(workout => {
-            // this.workouts.push(workout))
-            console.log(this.workouts)
-      })            
-      this.render()
+             this.workouts.push(workout)
+            console.log(this.workout)
+         this.render()   // console.log(this.workouts + "  <----- undefined? ")
+      })       
+           
 
 
     }

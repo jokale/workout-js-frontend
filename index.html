@@ -8,33 +8,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Permanent+Marker&display=swap" rel="stylesheet">
     <title></title>
 </head>
-<body>
+<body> 
+     <div class="pullout-tab" style="display: block;">
+            <p>Workouts</p>
+         </div>
     <div class="container ">
         <h1>Workout App</h1><br>
         <h3>Make a new workout and save it!</h3><br>
         <form id="new-workout-form">
-            <input type="text" name="workout-name" id="new-workout-name" placeholder="Workout name"> 
-            <input type="text" name="workout-description" id="new-workout-description" placeholder="Workout description">
-             <input type="text" name="workout-body_part" id="new-workout-body_part-name" placeholder="Body part">
-            <input type="text" name="workout-athlete" id="new-workout-athlete-name" placeholder="Athlete name">
+            <br><input type="text" name="workout-name" id="new-workout-name" placeholder="Workout name"><br> 
+           <br> <input type="text" name="workout-description" id="new-workout-description" placeholder="Workout description"><br>
+             <br><input type="text" name="workout-body_part" id="new-workout-body_part-name" placeholder="Body part"><br>
+           <br> <input type="text" name="workout-athlete" id="new-workout-athlete-name" placeholder="Athlete name"><br>
 
-            <input type="submit" name="submit">
+           <br> <input type="submit" name="submit"><br>
         </form>
+      
         <div id="workouts-content"><br>
            <h4>Some of the workouts already made:</h4>   
         <div contenteditable="true" id="workouts-container">
 
 
         </div>
+
+
+        <div class="ui visible sidebar"></div>
+
       
         <div id="workout-show">
 
         </div>
         </div>
     </div>
-  
+ 
+
     <p id="workout-name" onclick="myFunction()"> Jenna , Louise, Tom 
     </p>
+   
     <script src="src/components/workouts.js"></script>
     <script src="src/components/app.js"></script>
     <script src="src/adapters/WorkoutsAdapter.js"></script>
