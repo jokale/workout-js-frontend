@@ -23,19 +23,21 @@ class WorkoutsAdapter {
             }).then(res => res.json)
             .then(json => {
 
-      let deleteButtons = getWorkoutForm
-      let lastButton = deleteButtons.length - 1 
-      let deleteButton = deleteButtons[lastButton]
+                debugger
+    //   let deleteButtons = getWorkoutForm
+    //   let lastButton = deleteButtons.length - 1 
+    //   let deleteButton = deleteButtons[lastButton]
 
-        deleteButton.addEventListner('click', fetchDeleteWorkouts)
+        // deleteButton.addEventListner('click', deleteWorkouts)
 
-        Workouts.fetchDeleteWorkouts(e).then(()=> {
-            e.preventDefault()
-        
-         })
+        // const deleteWorkouts = () => {
+        //     let id = this.id
+        //    Workouts.fetchDeleteWorkouts(id)
+        // }
             
-             const getWorkoutForm = document.querySelectorAll('#new-workout-form button') 
+            //  const getWorkoutForm = document.querySelectorAll('#"workout-${workout.id} button') 
 
-            })
-        }
+          })      
+          
     }
+}

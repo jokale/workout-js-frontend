@@ -50,22 +50,22 @@
 
           <!-- <button onclick="myFunction()">Delete</button> -->
         </div>
-      
+        <div id="gear-links">
+          <h5>During unprecendeted times here are some workout essientals : </h5>
+        <center><a href="https://www.wired.co.uk/article/best-home-fitness-tech" target="_blank">Wired Best Home fitness tech</a><br></center>
+        <a href="https://www.t3.com/features/best-home-gym" target="_blank">Best home gym equipment</a><br>
+        <a href="https://www.womenshealthmag.com/uk/fitness/a707651/home-gym-equipment/"target="_blank">Home Gym Equipment for Women</a><br>
         <div id="workout-show">
-
+        </div>
         </div>
         </div>
     </div>
 
-    <h5>During unprecendeted times here are some workout essientals </h5>
     <br><div class="footer">
       <p>Created by Joanna E Kalema </p>
     </div>
 
-    <!-- fetch(http://localhost:3000/workouts/6,
-    method : "Delete",
-  }).then(res)=>res.json()).then((workout)=>
-  console.log(workout)); -->
+
 
   <script>
     function myLowerBodyFunction() {
@@ -83,22 +83,20 @@
     <script>function myCardioFunction(){
       document.getElementById('cardio').innerHTML="Cardio is exercise that gets you moving. It increases your heart rate up (hence the name) and makes you perspire. Good cardio exercises are sports such as basketball, soccer, tennis, X-country skiing, skating, running, or in the gym, try the treadmill, stair climber, elliptical, or a brisk set of jumping rope. <br><br>Why It’s Important: Cardio gives your heart and lungs the exercise they need. It helps build stamina and endurance, and burns calories so you achieve and maintain a healthy weight"
     }
-
     </script>
 
     <script>function myFlexFunction(){
       document.getElementById('flexibility').innerHTML="When we are young, we take the ability to fully stretch our bodies for granted, but it is important to keep stretching as we get older.<br><br>Why It’s Important: A stiff body is more susceptible to injury. Without regular stretching, hamstrings shorten, back muscles tighten, hips stiffen. Stretching also helps relieve tension and reduce inflammation, thus aiding in overall health."
     }
-
     </script>
 
+    <script src="src/adapters/WorkoutsAdapter.js"></script>
     <script src="src/components/workouts.js"></script>
     <script src="src/components/athletes.js"></script>
     <script src="src/components/body_parts.js"></script>
     <script src="src/components/app.js"></script>
-    <script src="src/adapters/WorkoutsAdapter.js"></script>
-    <script src="src/adapters/BodyPartsAdapter.js"></script>
-    <script src="src/index.js"></script>
+    <!-- <script src="src/adapters/BodyPartsAdapter.js"></script> -->
+    <script defer src="src/index.js"></script>
 
 </body>
 </html>

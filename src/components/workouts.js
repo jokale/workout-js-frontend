@@ -15,7 +15,7 @@ class Workouts{
         this.newWorkoutAthlete = document.getElementById('new-workout-athlete-name')
         this.workoutForm = document.getElementById('new-workout-form')
         this.workoutForm.addEventListener('submit', this.createWorkout.bind(this))
-        this.getWorkoutForm = document.querySelectorAll('new-workout-form button')
+        this.getWorkoutForm = document.querySelectorAll('#workouts-container button')
         // this.workoutsContainer.addEventListener('dblclick', this.handleWorkoutClick.bind(this))
         // }
 
@@ -30,7 +30,10 @@ class Workouts{
         this.adapter.createWorkout(value_1,value_2,value_3,value_4).then(workout => {
              this.workouts.push(workout)
         
-         this.render()   
+        //  this.render() 
+
+        fetchAndLoadWorkouts()
+
       })       
            
 
@@ -39,7 +42,8 @@ class Workouts{
 
 
     fetchAndLoadWorkouts() {
-    
+         let workoutsContainer = document.getElementById('workouts-container')
+        workoutsContainer = ''
           this.adapter
           .getWorkouts()
           .then(workouts => {
@@ -47,29 +51,43 @@ class Workouts{
         })
         .then(() => {
             this.render()
+             this.deleteAction()
         })
+
+        
+    }
+        
+        deleteAction(){
+            let deleteButtons = document.querySelectorAll('#workouts-container button')
+
+            // debugger
+            for (let i = 0; i < deleteButtons.length; i++){
+                deleteButtons[i].addEventListener('click', e => {
+                    console.log('deleted')
+               this.deleteWorkouts(e) } )
+            }
+            
     }
     render(){
-        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li id="workout-${workout.id}">${workout.description}</li>`).join('')
+        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li id="workout-${workout.id}">${workout.description}</li><button id="${workout.id}">Delete workout:</button>`).join('')
     }
-    deleteAction(){
-        let deleteButtons = this.getWorkoutForm
-        for (let i = 0; i < deleteButtons.length; i++){
-            deleteButtons[i].addEventListener('click', deleteWorkouts )
-        }
+   
 
-    }
-      deleteWorkouts(){
-        let id = this.id
-        fetchDeleteWorkouts(id)
+    
+      deleteWorkouts(e){
+          e.preventDefault()
+          
+        // let id = document.querySelector('#workout-${workout.id}')
+        this.fetchDeleteWorkouts(e.target.id)
     }
     fetchDeleteWorkouts(id){
-        fetch(this.baseUrl + id,{
+        
+        fetch(`${this.baseUrl}${id}`,{
             method: 'DELETE'
         })
-        .then(res=>res.json()).then(()=>{
-         this.workoutsContainer.innerHTML = ''
-        // (workout => {document.querySelector("#workout-${workout.id}").innerHTML = ''
+        .then(res=>res.json()).then(workout =>{
+        
+            document.querySelector(`#workout-${workout.workoutId}`).remove();
         this.workouts = []
         fetchAndLoadWorkouts()
         })
