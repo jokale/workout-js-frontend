@@ -10,53 +10,95 @@
 </head>
 <body> 
   
-     <div class="pullout-tab" style="display: block;">
-            <p>Workouts</p>
-         </div>
+
     <div class="container ">
-        <h1>Workout App</h1><br>
-        <h3>Make a new workout and save it!</h3><br>
-        <form id="new-workout-form">
-            <br><input type="text" name="workout-name" id="new-workout-name" placeholder="Workout name"><br> 
-           <br> <input type="text" name="workout-description" id="new-workout-description" placeholder="Workout description"><br>
-             <br><input type="text" name="workout-body_part" id="new-workout-body_part-name" placeholder="Body part"><br>
+        <h5>Welcome to</h5>
+        <h1>Workout App</h1>
+        <h5>An informative application to learn about exercise and allow you to share your workouts with the world</h5><br>
+
+
+        <h5> The 5 key areas you can work out (click to find out more):
+          <ol>
+            <li id="lower-body"onclick="myLowerBodyFunction()"> 1. Lower body</li>
+            <li id="upper-body" onclick="myUpperBodyFunction()">2. Upper body</li>
+            <li id="core" onclick="myCoreFunction()">3. Core</li>
+            <li id="cardio" onclick="myCardioFunction()">4. Cardio</li>
+            <li id="flexibility" onclick="myFlexFunction()">5. Flexibility</li>
+          </ol>
+        </h5>
+
+        <!-- <div id="body_parts-container">  -->
+
+        </div>
+
+
+        <h5>Make a new workout and save it</h5>
+
+        <form id="new-workout-form" class="hidden">
+            <input type="text" name="workout-name" id="new-workout-name" placeholder="Workout name"><br> 
+           <br> <input type="textfield" name="workout-description" id="new-workout-description" placeholder="Workout description"><br>
+           <br><input type="text" name="workout-body_part" id="new-workout-body_part-name" placeholder="Body part"><br>
            <br> <input type="text" name="workout-athlete" id="new-workout-athlete-name" placeholder="Athlete name"><br>
 
            <br> <input type="submit" name="submit"><br>
         </form>
       
         <div id="workouts-content"><br>
-           <h4>Some of the workouts already made:</h4>   
-        <div contenteditable="true" id="workouts-container">
 
+           <h4>Some of the workouts already made by <br> our amazing athletes :</h4>   
+        <div contenteditable="true" id="workouts-container" >
 
+          <!-- <button onclick="myFunction()">Delete</button> -->
         </div>
-
-
-        <div class="ui visible sidebar"></div>
-
       
         <div id="workout-show">
 
         </div>
         </div>
     </div>
- 
 
-    <p id="workout-name" onclick="myFunction()"> Jenna , Louise, Tom 
-    </p>
-   
+    <h5>During unprecendeted times here are some workout essientals </h5>
+    <br><div class="footer">
+      <p>Created by Joanna E Kalema </p>
+    </div>
+
+    <!-- fetch(http://localhost:3000/workouts/6,
+    method : "Delete",
+  }).then(res)=>res.json()).then((workout)=>
+  console.log(workout)); -->
+
+  <script>
+    function myLowerBodyFunction() {
+      document.getElementById("lower-body").innerHTML = "Lower body includes legs and glutes. Some of the most common exercises for the lower body are lunges, squats, step-ups, mountain climbers, and squat-thrusts.<br><br>Why It’s Important: Working the lower body tones the legs and glutes, and helps you maintain lower body strength. Powerful leg muscles allow us to climb stairs easily, to squat down and retrieve something off the floor, to get back up if we have fallen. Strong leg muscles also help protect our knees and hips from injury. They help us preserve our mobility, agility and stability as we age, and are helpful in maintaining our balance.";
+    }
+    </script>
+    <script> function myUpperBodyFunction(){
+      document.getElementById('upper-body').innerHTML = "Upper body includes arms, shoulders and upper back. Some of the most common exercises for the upper body are biceps curls, triceps curls, bench presses, overhead presses, lateral raises, and upright rows. <br><br> Why It’s Important: Working the upper body tones the arms and helps you not only look good, but maintain upper body strength. As we get older–and I’m talking even past age 30–we slowly but surely start to lose muscle. Exercise is key to maintaining muscle mass as the years go by. Upper body workouts also work the shoulders and muscles of the upper back. This aids in keeping good posture as strong muscles help support the upper spine. Good posture allows your lungs and diaphragm to fully expand, aiding in respiratory health."
+    }</script>
+    <script>function myCoreFunction(){
+      document.getElementById('core').innerHTML= "<br>Your core includes your upper and lower abdominal muscles and back muscles. Some of the most common core exercises are sit-ups of various kinds, push-ups (men’s or women’s), leg raises, and planks. (Upper body workouts also help the core as your stomach muscles should be engaged as you lift. <br><br> Why It’s Important Your core supports your back, which in turn supports your entire body. Having strong stomach and back muscles helps take some of the load off of your spine. It helps improve balance, stability, and posture."
+    }
+    </script>
+
+    <script>function myCardioFunction(){
+      document.getElementById('cardio').innerHTML="Cardio is exercise that gets you moving. It increases your heart rate up (hence the name) and makes you perspire. Good cardio exercises are sports such as basketball, soccer, tennis, X-country skiing, skating, running, or in the gym, try the treadmill, stair climber, elliptical, or a brisk set of jumping rope. <br><br>Why It’s Important: Cardio gives your heart and lungs the exercise they need. It helps build stamina and endurance, and burns calories so you achieve and maintain a healthy weight"
+    }
+
+    </script>
+
+    <script>function myFlexFunction(){
+      document.getElementById('flexibility').innerHTML="When we are young, we take the ability to fully stretch our bodies for granted, but it is important to keep stretching as we get older.<br><br>Why It’s Important: A stiff body is more susceptible to injury. Without regular stretching, hamstrings shorten, back muscles tighten, hips stiffen. Stretching also helps relieve tension and reduce inflammation, thus aiding in overall health."
+    }
+
+    </script>
+
     <script src="src/components/workouts.js"></script>
     <script src="src/components/athletes.js"></script>
     <script src="src/components/body_parts.js"></script>
     <script src="src/components/app.js"></script>
     <script src="src/adapters/WorkoutsAdapter.js"></script>
+    <script src="src/adapters/BodyPartsAdapter.js"></script>
     <script src="src/index.js"></script>
-<script> 
-function myFunction(){
-    document.getElementById("workout-name").innerHTML = "Some of the creators of these workouts";
-}
-</script>
 
 </body>
 </html>

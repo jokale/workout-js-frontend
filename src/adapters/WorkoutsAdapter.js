@@ -6,18 +6,36 @@ class WorkoutsAdapter {
         return fetch(this.baseUrl).then(res => res.json()
         )
     }
-    createWorkout(value) {
+    createWorkout(value_1, value_2, value_3, value_4) {
 
         const workout = {
-            description: value,
+            name: value_1,
+            description: value_2,
+            body_part_name: value_3,
+            athlete_name: value_4
         }
- return fetch(this.baseUrl, {
+         return fetch(this.baseUrl, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json',
+                'content-type': 'application/json'
               },
-            body: JSON.stringify({workout}),
-        }).then(res => res.json)
+            body: JSON.stringify({workout})
+            }).then(res => res.json)
+            .then(json => {
 
+      let deleteButtons = getWorkoutForm
+      let lastButton = deleteButtons.length - 1 
+      let deleteButton = deleteButtons[lastButton]
+
+        deleteButton.addEventListner('click', fetchDeleteWorkouts)
+
+        Workouts.fetchDeleteWorkouts(e).then(()=> {
+            e.preventDefault()
+        
+         })
+            
+             const getWorkoutForm = document.querySelectorAll('#new-workout-form button') 
+
+            })
+        }
     }
-}

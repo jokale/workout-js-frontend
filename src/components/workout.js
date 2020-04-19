@@ -3,7 +3,7 @@ class Workout {
         this.id = workoutJSON.id 
         this.name = workoutJSON.name
         this.description = workoutJSON.description
-        this.athlete = workoutJSON.athlete.name 
+        // this.athlete = workoutJSON.athlete.name 
      }
 // renderLi(){
 // return `<li>${this.name}</li>`
