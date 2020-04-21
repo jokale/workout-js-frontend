@@ -23,7 +23,7 @@ class WorkoutsAdapter {
             }).then(res => res.json)
             .then(json => {
 
-                debugger
+                // debugger
     //   let deleteButtons = getWorkoutForm
     //   let lastButton = deleteButtons.length - 1 
     //   let deleteButton = deleteButtons[lastButton]
