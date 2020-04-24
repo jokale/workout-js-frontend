@@ -16,12 +16,11 @@ class Workouts{
         this.workoutForm = document.getElementById('new-workout-form')
         this.workoutForm.addEventListener('submit', this.createWorkout.bind(this))
         this.getWorkoutForm = document.querySelectorAll('#workouts-container button')
-        // this.workoutsContainer.addEventListener('dblclick', this.handleWorkoutClick.bind(this))
-        // }
+       
 
     }
     createWorkout(e) {
-        // this.adapter = new WorkoutsAdapter
+        
         e.preventDefault()
              const value_1 =  this.newWorkoutName.value
              const value_2 =  this.newWorkoutDescription.value
@@ -30,7 +29,7 @@ class Workouts{
         this.adapter.createWorkout(value_1,value_2,value_3,value_4).then(workout => {
              this.workouts.push(workout)
         
-        //  this.render() 
+
 
         fetchAndLoadWorkouts()
 
@@ -60,7 +59,7 @@ class Workouts{
         deleteAction(){
             let deleteButtons = document.querySelectorAll('#workouts-container button')
 
-            // debugger
+       
             for (let i = 0; i < deleteButtons.length; i++){
                 deleteButtons[i].addEventListener('click', e => {
                     console.log('deleted')
@@ -77,7 +76,6 @@ class Workouts{
       deleteWorkouts(e){
           e.preventDefault()
           
-        // let id = document.querySelector('#workout-${workout.id}')
         this.fetchDeleteWorkouts(e.target.id)
     }
     fetchDeleteWorkouts(id){

@@ -23,19 +23,6 @@ class WorkoutsAdapter {
             }).then(res => res.json)
             .then(json => {
 
-                // debugger
-    //   let deleteButtons = getWorkoutForm
-    //   let lastButton = deleteButtons.length - 1 
-    //   let deleteButton = deleteButtons[lastButton]
-
-        // deleteButton.addEventListner('click', deleteWorkouts)
-
-        // const deleteWorkouts = () => {
-        //     let id = this.id
-        //    Workouts.fetchDeleteWorkouts(id)
-        // }
-            
-            //  const getWorkoutForm = document.querySelectorAll('#"workout-${workout.id} button') 
 
           })      
           

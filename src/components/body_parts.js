@@ -14,7 +14,7 @@ class BodyParts{
         .getBodyParts()
         .then(body_parts =>{
             body_parts.forEach(body_part => this.body_parts.push(body_parts))
-            // return console.log(body_parts)
+         
         })
         .then(()=> {
             this.render()
