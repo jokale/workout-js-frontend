@@ -16,7 +16,6 @@ class Workouts{
         this.workoutForm = document.getElementById('new-workout-form')
         this.workoutForm.addEventListener('submit', this.createWorkout.bind(this))
         this.getWorkoutForm = document.querySelectorAll('#workouts-container button')
-       
 
     }
     createWorkout(e) {
@@ -28,10 +27,11 @@ class Workouts{
              const value_4 =   this.newWorkoutAthlete.value
         this.adapter.createWorkout(value_1,value_2,value_3,value_4).then(workout => {
              this.workouts.push(workout)
-        
+            
+                 
 
-
-        fetchAndLoadWorkouts()
+                 
+         this.fetchAndLoadWorkouts()
 
       })       
            
@@ -68,7 +68,7 @@ class Workouts{
             
     }
     render(){
-        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li id="workout-${workout.id}">${workout.description}</li><button id="${workout.id}">Delete workout:</button>`).join('')
+        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li>${workout.name}</li><li id="workout-${workout.id}">${workout.description}</li><button id="${workout.id}">Delete workout</button>`).join('')
     }
    
 
@@ -86,8 +86,9 @@ class Workouts{
         .then(res=>res.json()).then(workout =>{
         
             document.querySelector(`#workout-${workout.workoutId}`).remove();
-        this.workouts = []
-        fetchAndLoadWorkouts()
+
+         this.workouts = []
+        this.fetchAndLoadWorkouts()
         })
     }
  }

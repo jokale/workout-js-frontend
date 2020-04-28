@@ -20,11 +20,11 @@ class WorkoutsAdapter {
                 'content-type': 'application/json'
               },
             body: JSON.stringify({workout})
-            }).then(res => res.json)
-            .then(json => {
+            }).then(res => res.json())
+            .then(json => { 
+            console.log(json)
+                })
 
-
-          })      
-          
-    }
+          }       
+    
 }
