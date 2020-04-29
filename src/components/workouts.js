@@ -25,13 +25,17 @@ class Workouts{
              const value_2 =  this.newWorkoutDescription.value
              const value_3 =  this.newWorkoutBodyPart.value
              const value_4 =   this.newWorkoutAthlete.value
-        this.adapter.createWorkout(value_1,value_2,value_3,value_4).then(workout => {
+         this.adapter.createWorkout(value_1,value_2,value_3,value_4).then(workout => {
              this.workouts.push(workout)
             
                  
 
                  
-         this.fetchAndLoadWorkouts()
+        //]
+        
+    //    this.fetchAndLoadWorkouts()
+        this.render(workout)
+        this.deleteAction()
 
       })       
            
@@ -43,8 +47,7 @@ class Workouts{
     fetchAndLoadWorkouts() {
          let workoutsContainer = document.getElementById('workouts-container')
         workoutsContainer = ''
-          this.adapter
-          .getWorkouts()
+          this.adapter.getWorkouts()
           .then(workouts => {
             workouts.forEach(workout => this.workouts.push(workout))
         })
@@ -68,6 +71,8 @@ class Workouts{
             
     }
     render(){
+        // debugger
+        // console.log('debugger 1')
         this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li>${workout.name}</li><li id="workout-${workout.id}">${workout.description}</li><button id="${workout.id}">Delete workout</button>`).join('')
     }
    

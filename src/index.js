@@ -19,6 +19,10 @@ function myFlexFunction(){
   document.getElementById('flexibility').innerHTML="When we are young, we take the ability to fully stretch our bodies for granted, but it is important to keep stretching as we get older.<br><br>Why It’s Important: A stiff body is more susceptible to injury. Without regular stretching, hamstrings shorten, back muscles tighten, hips stiffen. Stretching also helps relieve tension and reduce inflammation, thus aiding in overall health."
 }
 
+function myButtonFunction(){
+  alert("Hey your workout looks great, Scroll down to check it out!")
+}
+
 
 
 

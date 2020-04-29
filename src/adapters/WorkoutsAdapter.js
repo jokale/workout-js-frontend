@@ -17,14 +17,19 @@ class WorkoutsAdapter {
          return fetch(this.baseUrl, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'accept': 'application/json'
               },
-            body: JSON.stringify({workout})
+            body: JSON.stringify(workout)
             }).then(res => res.json())
-            .then(json => { 
-            console.log(json)
-                })
+    
+            // .then(workoutJson =>  (workoutJson.workout)
+            //     // return workoutJson
+            //       console.log(workout
+        //  
+                //   )
+        
 
-          }       
+         }       
     
 }
