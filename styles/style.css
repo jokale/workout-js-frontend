@@ -57,6 +57,15 @@ body {
 
   }
 
+  input#reset-button{
+    border-radius: 8px;
+    color: rgb(105, 190, 255);
+    border: blueviolet;
+
+
+
+  }
+
 
   
   input:focus{
@@ -107,6 +116,7 @@ text-indent: 0cm;
   button{
     color: rgb(105, 190, 255);
     border: blueviolet;
+    border-radius: 8px;
   
   }
 

@@ -20,9 +20,12 @@ function myFlexFunction(){
 }
 
 function myButtonFunction(){
-  alert("Hey your workout looks great, Scroll down to check it out!")
+  alert("Hey your workout looks great, Scroll down to check it out! Don't forget to clear the form")
 }
 
+function myFunction(){
+  document.getElementById('new-workout-form').reset();
+}
 
 
 

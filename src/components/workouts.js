@@ -66,7 +66,11 @@ class Workouts{
             for (let i = 0; i < deleteButtons.length; i++){
                 deleteButtons[i].addEventListener('click', e => {
                     console.log('deleted')
-               this.deleteWorkouts(e) } )
+                    alert('Ah man said to see your workout go, Be sure to add another later!')
+               this.deleteWorkouts(e) } 
+               
+               
+               )
             }
             
     }
