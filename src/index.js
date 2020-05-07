@@ -12,7 +12,6 @@ function myCoreFunction(){
 
 function myCardioFunction(){
   document.getElementById('cardio').innerHTML="Cardio is exercise that gets you moving. It increases your heart rate up (hence the name) and makes you perspire. Good cardio exercises are sports such as basketball, soccer, tennis, X-country skiing, skating, running, or in the gym, try the treadmill, stair climber, elliptical, or a brisk set of jumping rope. <br><br>Why It’s Important: Cardio gives your heart and lungs the exercise they need. It helps build stamina and endurance, and burns calories so you achieve and maintain a healthy weight"
-  event.preventDefault();
 }
 
 
@@ -24,10 +23,7 @@ function myButtonFunction(){
   alert("Hey your workout looks great, Scroll down to check it out! Don't forget to clear the form")
 }
 
-function myFunction(){
-  document.getElementById('new-workout-form').reset();
-  alert('This just keeps your data safe to ensure your data is not being used for terrible things')
-}
+
 
 
 

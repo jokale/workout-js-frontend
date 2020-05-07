@@ -1,5 +1,7 @@
 class Workouts{
+    
     constructor() {
+        
         this.workouts= []
         this.adapter = new WorkoutsAdapter()
         this.initiBindingsAndEventListeners()
@@ -19,7 +21,6 @@ class Workouts{
 
     }
     createWorkout(e) {
-        
         e.preventDefault()
              const value_1 =  this.newWorkoutName.value
              const value_2 =  this.newWorkoutDescription.value
@@ -28,14 +29,12 @@ class Workouts{
          this.adapter.createWorkout(value_1,value_2,value_3,value_4).then(workout => {
              this.workouts.push(workout)
             
-                 
-
-                 
-        //]
-        
-    //    this.fetchAndLoadWorkouts()
-        this.render(workout)
+        this.render()
         this.deleteAction()
+        this.resetAction()
+
+
+        
 
       })       
            
@@ -58,6 +57,21 @@ class Workouts{
 
         
     }
+
+
+    resetAction(){
+        let  workoutName = document.getElementById('new-workout-name')
+        let  workoutDescription = document.getElementById('new-workout-description')
+        let  workoutBodyPart = document.getElementById('new-workout-body_part-name')
+        let workoutAthlete = document.getElementById('new-workout-athlete-name')
+
+        workoutName.value = "";
+        workoutDescription.value = "";
+        workoutBodyPart.value = "";
+        workoutAthlete.value = "";
+
+
+    }
         
         deleteAction(){
             let deleteButtons = document.querySelectorAll('#workouts-container button')
@@ -77,6 +91,7 @@ class Workouts{
     render(){
         // debugger
         // console.log('debugger 1')
+        // console.log(workout.name)
         this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li>${workout.name}</li><li id="workout-${workout.id}">${workout.description}</li><button id="${workout.id}">Delete workout</button>`).join('')
     }
    
@@ -102,3 +117,23 @@ class Workouts{
     }
  }
 
+
+
+
+//  class Joanna {
+
+
+//     static name = "Kalema" 
+
+//     myAge = 22 
+
+//     age(){
+//      return('Hello I am 22 years old')
+//     }
+//     static iceCream(){
+//         return ("I like ice cream")
+//     }
+
+//     sayThis = ()=> this 
+    
+//  }

@@ -1,3 +1,5 @@
+//class for singular workout 
+
 class Workout {
     constructor(workoutJSON) {
         this.id = workoutJSON.id 

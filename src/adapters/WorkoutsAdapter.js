@@ -21,15 +21,17 @@ class WorkoutsAdapter {
                 'accept': 'application/json'
               },
             body: JSON.stringify(workout)
-            }).then(res => res.json())
-    
-            // .then(workoutJson =>  (workoutJson.workout)
-            //     // return workoutJson
-            //       console.log(workout
-        //  
-                //   )
+            }).then(res =>
+        
+                {return res.json()
+                    
+                
+                })
+               
+            
+  
         
 
-         }       
+    }    
     
 }
