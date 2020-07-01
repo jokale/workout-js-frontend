@@ -1,18 +1,19 @@
 body {
-    /* background-color: powderblue; */
-    background-image: linear-gradient(to bottom right, powderblue, rgba(218, 189, 247, 0.851))
+    background-color:  #fcfbf4;
+    /* background-image: linear-gradient(to bottom right, powderblue, rgba(218, 189, 247, 0.851)) */
   }
   h1 {
-    font-family:  'Permanent Marker', cursive;
+    /* font-family:  'Permanent Marker', cursive; */
+    font-family: 'Black Ops One', cursive;
     text-shadow: 1px 1px #1c0202;
-    color: cornflowerblue;
+    color: #2e2f2e;
     text-align: center;
   }
 
 
 
   h2{
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Black Ops One', cursive; */
     text-align: center;
     color: rgb(19, 27, 43);
   
@@ -24,16 +25,17 @@ body {
     color: rgb(0, 0, 0);
   }
   h4 {
-    color: cornflowerblue;
+    color: #2e2f2e;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
   }
   h5 {
     /* font-family:  'Permanent Marker', cursive; */
     /* text-shadow: 1px 1px #1c0134; */
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Lato', sans-serif;
 
-    color: cornflowerblue;
+    color: #2e2f2e;
     text-align: center;
   }
   p {
@@ -43,7 +45,7 @@ body {
   }
 
    li{
-    color: blueviolet;
+    color: #7e75a3;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;     
@@ -78,12 +80,13 @@ body {
    border: none;
   border-radius: 4px;
   border-bottom: 2px solid rgb(0, 157, 255);
-  background-image: linear-gradient(to bottom right, powderblue, rgba(218, 189, 247, 0.851))
+  /* background-image: linear-gradient(to bottom right, powderblue, rgba(218, 189, 247, 0.851)) */
 
   }
 
   input#new-workout-description{
     text-align: center;
+    border-bottom: 2px solid red;
   }  
 
   input#new-workout-name{
@@ -94,7 +97,14 @@ body {
   form#new-workout-form{
 text-align: center;
 text-indent: 0cm;    
-
+width: 100%;
+background-color: #4b4e4d31;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
 
   }
 
@@ -114,9 +124,8 @@ text-indent: 0cm;
   }
 
   button{
-    color: rgb(105, 190, 255);
-    border: blueviolet;
-    border-radius: 8px;
+    color: rgb(4, 29, 49);
+    border-radius: 20px;
   
   }
 
@@ -163,9 +172,54 @@ text-indent: 0cm;
     text-decoration: none;
   }
 
+label {
+  color:blueviolet
+}
 
+select#new-workout-body_part-name{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
+input#new-workout-name{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input#new-workout-description{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
+input#new-workout-athlete-name{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  color: #7e75a3;
+  font-family: 'Lato', sans-serif;
+
+}
   
 
  

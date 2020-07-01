@@ -6,50 +6,63 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lato&display=swap" rel="stylesheet">
     <title></title>
 </head>
 <body> 
   
 
     <div class="container ">
-        <h5>Welcome to</h5>
-        <h1>Workout App</h1>
+        <h1>Fitness Overload</h1>
         <h5>An informative application to learn about exercise and allow you to share your workouts with the world</h5><br>
 
 
-        <h5> The 5 key areas you can work out (click to find out more):
+        <h4> You want to workout ? <br> Don't know where to start? <br> You don't even know what body part your working <br>or why you should be working it? <br> Here are the 5 key areas you can work out<br> and why :
           <ol>
-            <li id="lower-body"onclick="myLowerBodyFunction()"> 1. Lower body</li>
-            <li id="upper-body" onclick="myUpperBodyFunction()">2. Upper body</li>
-            <li id="core" onclick="myCoreFunction()">3. Core</li>
-            <li id="cardio" onclick="myCardioFunction()">4. Cardio</li>
-            <li id="flexibility" onclick="myFlexFunction()">5. Flexibility</li>
+            <li id="lower-body"onmouseover="myLowerBodyFunction()" onmouseout="myLowerBodyFunctionTwo()"> 1. Lower body</li>
+            <li id="upper-body" onmouseover="myUpperBodyFunction()" onmouseout="myUpperBodyFunctionTwo()">2. Upper body</li>
+            <li id="core" onmouseover="myCoreFunction()" onmouseout="myCoreFunctionTwo()">3. Core</li>
+            <li id="cardio" onmouseover="myCardioFunction()" onmouseout="myCardioFunctionTwo()">4. Cardio</li>
+            <li id="flexibility" onmouseover="myFlexFunction()" onmouseout="myFlexFunctionTwo()">5. Flexibility</li>
           </ol>
-        </h5>
+        </h4>
 
         <!-- <div id="body_parts-container">  -->
 
         </div>
 
+        <div id="workouts-content"><br>
 
-        <h5>Make a new workout and save it</h5>
+           <h4>Still unsure of what a workout should look like? <br> Here are some of the workouts already made by <br> our amazing athletes! </h4>   
+        <div contenteditable="true" id="workouts-container" >
+
+        </div>
+        <h5>If your feeling up to it <br> make a workout for the whole world to see!</h5>
 
         <form id="new-workout-form" class="hidden">
+          <h4>New Workout Form</h4> <br>
+          <label for="">Workout Name</label> <br>
+
             <input type="text" name="workout-name" id="new-workout-name" placeholder="Workout name"><br> 
-           <br> <input type="textfield" name="workout-description" id="new-workout-description" placeholder="Workout description"><br>
-           <br><input type="text" name="workout-body_part" id="new-workout-body_part-name" placeholder="Body part"><br>
+            <label for="">Workout description</label> <br>
+
+           <br> <input type="textfield" name="workout-description" id="new-workout-description" placeholder="Workout description..."><br>
+           <br>
+           <label for="">Workout area</label> <br>
+           <center><select type="text" name="workout-body_part" id="new-workout-body_part-name" placeholder="Body part"><br>
+          <option value="lower body">Lower body</option> 
+          <option value="upper body">Upper body</option> 
+          <option value="core">Core</option> 
+          <option value="cardio">Cardio</option> 
+          <option value="flexibility">Flexibility</option> 
+
+          </select></center> <br>
+          <label for="">Athlete Name</label> <br>
+
            <br> <input type="text" name="workout-athlete" id="new-workout-athlete-name" placeholder="Athlete name"><br>
 
            <br> <button  onclick="myButtonFunction()" class="submit-button" type="submit" name="action">Submit</button><br>
         </form>
-      
-        <div id="workouts-content"><br>
-
-           <h4>Some of the workouts already made by <br> our amazing athletes :</h4>   
-        <div contenteditable="true" id="workouts-container" >
-
-          <!-- <button onclick="myFunction()">Delete</button> -->
-        </div>
         <div id="gear-links">
           <h5>During unprecendeted times here are some workout essientals : </h5>
         <center><a href="https://www.wired.co.uk/article/best-home-fitness-tech" target="_blank">Wired Best Home fitness tech</a><br></center>
@@ -60,6 +73,11 @@
         </div>
         </div>
     </div>
+
+
+
+
+
 
     <br><div class="footer">
      <p>Created by Joanna E Kalema </p>
