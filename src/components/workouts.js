@@ -52,7 +52,7 @@ class Workouts{
         })
         .then(() => {
             this.render()
-             this.deleteAction()
+              this.deleteAction()
         })
 
         
@@ -80,7 +80,7 @@ class Workouts{
             for (let i = 0; i < deleteButtons.length; i++){
                 deleteButtons[i].addEventListener('click', e => {
                     console.log('deleted')
-                    alert('Ah man said to see your workout go, Be sure to add another later!')
+                    // alert('${workout.id}')
                this.deleteWorkouts(e) } 
                
                
@@ -89,10 +89,8 @@ class Workouts{
             
     }
     render(){
-        // debugger
-        // console.log('debugger 1')
-        // console.log(workout.name)
-        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<li>${workout.name}</li><li id="workout-${workout.id}">${workout.description}</li><button id="${workout.id}">Delete workout</button>`).join('')
+     
+        this.workoutsContainer.innerHTML = this.workouts.map(workout =>  `<button id="${workout.id}">${workout.id}</button><li>${workout.name}</li><li id="workout-${workout.id}">${workout.description}</li> `).join('')
     }
    
 
@@ -107,7 +105,8 @@ class Workouts{
         fetch(`${this.baseUrl}${id}`,{
             method: 'DELETE'
         })
-        .then(res=>res.json()).then(workout =>{
+         .then(res=>res.json())
+        .then(workout =>{
         
             document.querySelector(`#workout-${workout.workoutId}`).remove();
 

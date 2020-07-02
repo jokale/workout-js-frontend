@@ -34,7 +34,7 @@ function myFlexFunctionTwo(){
   document.getElementById('flexibility').innerHTML="5. Flexibility"
  }
 function myButtonFunction(){
-  alert("Hey your workout looks great, Scroll down to check it out! Don't forget to clear the form")
+  alert("Hey your workout looks great")
 }
 
 
