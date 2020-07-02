@@ -1,6 +1,6 @@
 class WorkoutsAdapter {
     constructor(){
-        this.baseUrl = 'http://localhost:3000/workouts'
+        this.baseUrl = 'https://workout-rails-api-backend.herokuapp.com/workouts'
     }
     getWorkouts(){
         return fetch(this.baseUrl).then(res => res.json()
